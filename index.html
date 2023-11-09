@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<header class="header">
+  <div class="logo-menu">
+    <div class="logo-area">
+      <p class="top-logo" onclick="location.href='top.html'"><img src="img/book.png" alt=""></p>
+    </div>
+  </div>
+</header>
+
+<body>
+  <div class="contents">
+    <div class="book-open">
+      <p class="menu"><span class="menu-y">B</span>OOK</p>
+    </div>
+    
+    <div class="search">
+      <div class="book-search">本のタイトル</div>
+      <div class="search_bar">
+        <img src="img/search.png" alt="" class="search_icon">
+        <input type="text" id="formText" name="myFormText" class="form-control" placeholder="キーワードを入力" aria-label="books" aria-describedby="basic-addon1">
+        <button id="btn" class="btn btn-primary my-2">検索！</button>  
+      </div>
+    </div>
+
+    <div id="bookItem" class="album py-5 bg-light"></div>
+
+
+    <div class="tab-wrap">
+      <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01">読みたい本</label>
+      <!-- 読みたい本 -->
+      <div class="tab-content">
+        <div class="memo">
+          <div class="register">
+            <p class="pre-read">読みたい本を登録</p>
+            <table class="contact-table">
+              <tr>
+                <th class="contact-item">タイトル</th>
+                <td class="contact-body">
+                  <input id="title" type="text" name="title" class="form-text" />
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">ジャンル</th>
+                <td class="contact-body">
+                  <label class="radio-kinds"><input type="radio" name="kinds" class="check" value="文学">文学</label>
+                  <label class="radio-kinds"><input type="radio" name="kinds" class="check" value="ビジネス">ビジネス</label>
+                  <label class="radio-kinds"><input type="radio" name="kinds" class="check" value="趣味">趣味</label>
+                  <label class="radio-kinds"><input type="radio" name="kinds" class="check" value="教育">教育</label>
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">著者</th>
+                <td class="contact-body">
+                  <input id="author" type="text" name="author" class="form-text" />
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">価格</th>
+                <td class="contact-body">
+                  <input id="price" type="text" name="price" class="form-text" />円
+                </td>
+              </tr>
+            </table>
+      
+            <div class="button-area">
+              <button class="button-read" id="save">登録</button>
+              <button class="button-delete" id="clear">全て削除</button>
+            </div>
+  
+          </div>
+
+          <div class="register">
+            <p class="pre-read">登録リスト</p>
+            <p class="pre-comment">読んだら感想を追加してね！</p>
+
+            <ul id="list">
+            </ul> 
+          </div>
+        </div>
+      </div>
+
+      <!-- 読んだ本 -->
+      <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-02">読んだ本</label>
+        <div class="tab-content">
+          <div>
+            <div class="count" id="count"></div>
+          </div>
+          <div class="memo">
+            <div class="readed" id="read"></div>
+          </div>
+        </div>
+
+    </div>
+ 
+  </div>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
